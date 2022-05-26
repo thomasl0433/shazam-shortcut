@@ -13,11 +13,11 @@ app.get('/', async (req, res) => {
     const title = req.params.title;
 
     const out = {
-        "name": 'thomas',
-        "artist": artist,
-        "title": title
+        name: 'thomas',
+        artist: artist,
+        title: title
     };
-
+  res.setHeader('Content-Type', 'application/json')
   res.json(out);
 });
 
