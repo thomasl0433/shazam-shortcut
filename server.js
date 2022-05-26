@@ -1,23 +1,25 @@
-'use strict';
+"use strict";
 
-const express = require('express');
+const express = require("express");
+const morgan = require("morgan");
 
 // Constants
 const PORT = 8080;
-const HOST = '0.0.0.0';
+const HOST = "0.0.0.0";
 
 // App
 const app = express();
-app.get('/', async (req, res) => {
-    const artist = req.params.artist;
-    const title = req.params.title;
+app.use(morgan);
+app.get("/:params", (req, res) => {
+  const artist = req.params.artist;
+  const title = req.params.title;
 
-    const out = {
-        name: 'thomas',
-        artist: artist,
-        title: title
-    };
-  res.setHeader('Content-Type', 'application/json')
+  const out = {
+    name: "thomas",
+    artist: artist,
+    title: title,
+  };
+  console.log(out);
   res.json(out);
 });
 
