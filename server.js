@@ -14,3 +14,7 @@ app.get('/', (req, res) => {
 
 app.listen(PORT, HOST);
 console.log(`Running on http://${HOST}:${PORT}`);
+
+// TO DO
+// 1) take query params in the GET route
+// 2) ping the URL https://shazam-shortcut-pqymwrjaca-uc.a.run.app
