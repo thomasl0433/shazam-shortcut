@@ -9,17 +9,15 @@ const HOST = "0.0.0.0";
 
 // App
 const app = express();
-app.use(morgan);
-app.get("/:params", (req, res) => {
-  const artist = req.params.artist;
-  const title = req.params.title;
+app.use(morgan('tiny'));
+app.get("/search", (req, res) => {
+  const artist = req.query.artist;
+  const title = req.query.title;
 
   const out = {
-    name: "thomas",
     artist: artist,
     title: title,
   };
-  console.log(out);
   res.json(out);
 });
 
