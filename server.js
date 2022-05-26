@@ -8,7 +8,7 @@ const HOST = '0.0.0.0';
 
 // App
 const app = express();
-app.get('/', (req, res) => {
+app.get('/', async (req, res) => {
     const artist = req.params.artist;
     const title = req.params.title;
 
