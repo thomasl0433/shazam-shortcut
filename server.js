@@ -12,7 +12,13 @@ app.get('/', (req, res) => {
     const artist = req.params.artist;
     const title = req.params.title;
 
-  res.json({"name": 'thomas', "artist": "artist", "title": "title"});
+    const out = {
+        "name": 'thomas',
+        "artist": artist,
+        "title": title
+    };
+
+  res.json(out);
 });
 
 app.listen(PORT, HOST);
