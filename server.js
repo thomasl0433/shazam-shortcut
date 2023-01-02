@@ -8,7 +8,7 @@ var cors = require('cors')
 require("dotenv").config();
 
 // Constants
-const PORT = 8888;
+const PORT = 8080;
 const HOST = "0.0.0.0";
 let token = "";
 
