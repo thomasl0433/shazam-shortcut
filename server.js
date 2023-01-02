@@ -26,7 +26,7 @@ app.get('/receive-token', (req, res) => {
 
   // fs.writeFile('token.txt', token, (err) => {
   //   if (err) throw err;
-  // })
+  // }) 
 
   res.send('Registering token')
 })
