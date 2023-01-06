@@ -33,8 +33,8 @@ app.get('/receive-token', (req, res) => {
 
 app.get('/search', (req, res) => {
   try {
-    const artist = req.query.artist;
-    const title = req.query.title;
+    const artist = req.query.artist.toLowerCase();
+    const title = req.query.title.toLowerCase();
 
     spotify.search(artist, title, token)
 
